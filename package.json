@@ -1,6 +1,6 @@
 {
   "name": "jsvideo",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "description": "JavaScript 2 Video",
   "module": "dist/index.js",
   "main": "dist/index.cjs",
@@ -14,7 +14,8 @@
     "typescript": "^5.0.0"
   },
   "scripts": {
-    "build": "tsc && bun build.ts"
+    "build": "tsc && bun build.ts",
+    "prepare": "bun run build"
   },
   "type": "module"
 }
