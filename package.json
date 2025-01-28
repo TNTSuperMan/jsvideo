@@ -1,5 +1,7 @@
 {
   "name": "jsvideo",
+  "version": "0.0.0",
+  "description": "JavaScript 2 Video",
   "module": "dist/index.js",
   "main": "dist/index.cjs",
   "unpkg": "dist/index.js",
