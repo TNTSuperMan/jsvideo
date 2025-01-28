@@ -1,0 +1,18 @@
+{
+  "name": "jsvideo",
+  "module": "dist/index.js",
+  "main": "dist/index.cjs",
+  "unpkg": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "bun": "^1.1.45"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "build": "tsc && bun build.ts"
+  },
+  "type": "module"
+}

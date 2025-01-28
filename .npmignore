@@ -1,0 +1,8 @@
+node_modules
+play
+src
+.gitignore
+.npmignore
+build.ts
+bun.lockb
+tsconfig.json
