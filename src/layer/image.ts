@@ -1,6 +1,6 @@
 import { JSVGeneratorFunc, Layer, LayerState, rgba } from "./base";
 
-class ImageLayerState extends LayerState{
+export class ImageLayerState extends LayerState{
     size = 1;
     image = new Image();
 }

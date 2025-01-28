@@ -1,7 +1,7 @@
 import { Capture } from "./capture";
 import { Layer } from "./layer/base";
 
-export { L } from "./layer";
+export * from "./layer";
 export { subscribeAudio } from "./audio";
 
 export const createVideoRenderer = <T extends Layer<any>[]>(width: number, height: number, layers: T): {
