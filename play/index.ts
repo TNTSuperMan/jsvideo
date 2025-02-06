@@ -30,7 +30,7 @@ const v = createVideoRenderer(640, 480, [
         state.x = 0;
         state.y = 0;
         yield;
-        for(let j = 0;j < 4;j++){
+        for(let j = 0;j < 14;j++){
             yield* swing(state);
         }
         for(let i = 0;i < 20;i++){
