@@ -1,4 +1,15 @@
-import { L, createVideoRenderer } from "../src/index";
+import { L, LayerStateOf, createVideoRenderer } from "../src/index";
+
+function* swing(state: LayerStateOf<typeof L.text>){
+    for(let i = 0;i < 20;i++){
+        state.y += (100-state.y)/10
+        yield;
+    }
+    for(let i = 0;i < 20;i++){
+        state.y += (0-state.y)/10
+        yield;
+    }
+}
 
 const v = createVideoRenderer(640, 480, [
     L.rect(function*(state){
@@ -20,14 +31,7 @@ const v = createVideoRenderer(640, 480, [
         state.y = 0;
         yield;
         for(let j = 0;j < 4;j++){
-            for(let i = 0;i < 20;i++){
-                state.y += (100-state.y)/10
-                yield;
-            }
-            for(let i = 0;i < 20;i++){
-                state.y += (0-state.y)/10
-                yield;
-            }
+            yield* swing(state);
         }
         for(let i = 0;i < 20;i++){
             state.rotate += (100-state.rotate)/10
