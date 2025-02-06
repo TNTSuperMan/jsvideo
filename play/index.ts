@@ -1,3 +1,4 @@
+//参考：ビートまりお・ZUN Help me, ERINNNNNN!!
 import { L, LayerStateOf, createVideoRenderer } from "../src/index";
 
 function* swing(state: LayerStateOf<typeof L.text>){
