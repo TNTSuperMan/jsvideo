@@ -52,6 +52,7 @@ const v = createVideoRenderer(640, 480, [
     })
 ]);
 // 動画の投影用Canvasをボディに追加(録画のみする場合でも必要)
+// あとユーザー操作による処理じゃないと音がならない(録音されない)
 document.body.append(v.canvas)
 
 // 撮影
