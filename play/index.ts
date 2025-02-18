@@ -51,12 +51,17 @@ const v = createVideoRenderer(640, 480, [
         }
     })
 ]);
-// 動画の投影用Canvasをボディに追加(録画のみする場合でも必要)
-// あとユーザー操作による処理じゃないと音がならない(録音されない)
-document.body.append(v.canvas)
+const btn = document.createElement("button");
+document.body.appendChild(btn);
+btn.textContent = "start";
+btn.onclick = () => {    
+    // 動画の投影用Canvasをボディに追加(録画のみする場合でも必要)
+    // あとユーザー操作による処理じゃないと録画・音声の再生等が不可
+    document.body.append(v.canvas)
 
-// 撮影
-v.capture().then(e=>{
-    // 撮影結果をblobURLでコンソールに表示
-    console.log(URL.createObjectURL(e))
-})
+    // 撮影
+    v.capture().then(e=>{
+        // 撮影結果をblobURLでコンソールに表示
+        console.log(URL.createObjectURL(e))
+    })
+}
