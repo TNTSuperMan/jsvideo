@@ -24,7 +24,7 @@ export class SingleLayer<T extends LayerState> implements Layer{
     private generator: JSVGenerator;
     private originalGenerator: JSVGeneratorFunc<T>;
     constructor(state: T, generator: JSVGeneratorFunc<T>, drawer: (state: T, ctx: CanvasRenderingContext2D) => void){
-        this.originalState = state;
+        this.originalState = structuredClone(state);
         this.state = structuredClone(state);
         this.drawer = drawer;
         this.originalGenerator = generator;
