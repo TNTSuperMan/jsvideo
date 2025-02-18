@@ -56,7 +56,6 @@ document.body.appendChild(btn);
 btn.textContent = "start";
 btn.onclick = () => {    
     // 動画の投影用Canvasをボディに追加(録画のみする場合でも必要)
-    // あとユーザー操作による処理じゃないと録画・音声の再生等が不可
     document.body.append(v.canvas)
 
     // 撮影
