@@ -1,4 +1,4 @@
-import { JSVGeneratorFunc, Layer, LayerState, rgba } from "./base";
+import { JSVGeneratorFunc, SingleLayer, LayerState, rgba } from "./base";
 
 export class RectangleLayerState extends LayerState{
     size = 1;
@@ -9,7 +9,7 @@ export class RectangleLayerState extends LayerState{
     height = 0;
 }
 export const createRectLayer = (generator: JSVGeneratorFunc<RectangleLayerState>) =>
-        new Layer(new RectangleLayerState, generator, (state, ctx)=>{
+        new SingleLayer(new RectangleLayerState, generator, (state, ctx)=>{
     ctx.fillStyle = rgba(state.r, state.g, state.b, state.transparent);
     ctx.fillRect(state.cx, state.cy, state.width * state.size, state.height * state.size);
 })

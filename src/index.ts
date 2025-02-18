@@ -1,9 +1,9 @@
 import { Capture } from "./capture";
-import { Layer } from "./layer/base";
+import { SingleLayer } from "./layer/base";
 
 export * from "./layer";
 
-export const createVideoRenderer = <T extends Layer<any>[]>(width: number, height: number, layers: T): {
+export const createVideoRenderer = <T extends SingleLayer<any>[]>(width: number, height: number, layers: T): {
     canvas: HTMLCanvasElement;
     render: () => boolean;
     init: () => void;

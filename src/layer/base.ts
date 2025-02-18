@@ -13,7 +13,11 @@ export class LayerState{
     cx: number = 0;
     cy: number = 0;
 }
-export class Layer<T extends LayerState>{
+export interface Layer{
+    draw(ctx: CanvasRenderingContext2D): boolean;
+    init(): void;
+}
+export class SingleLayer<T extends LayerState> implements Layer{
     private state: T;
     private originalState: T;
     private drawer: (state: T, ctx: CanvasRenderingContext2D) => void;
