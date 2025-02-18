@@ -1,6 +1,6 @@
 import { JSVGeneratorFunc, SingleLayer, Layer, JSVGenerator } from "./base";
 import { createImageLayer } from "./image";
-import { createMultiLayer } from "./multi";
+import { createMultiLayer, MultipleLayer } from "./multi";
 import { createRectLayer } from "./rect";
 import { createTextLayer } from "./text";
 
@@ -13,6 +13,9 @@ export const L = {
 
 export type LayerStateOf<T extends (generator: JSVGeneratorFunc<any>) => SingleLayer<any>> =
     T extends (generator: JSVGeneratorFunc<infer P>) => SingleLayer<any> ? P : never;
+export type LayerOf<T extends Function> =
+    T extends (generator: JSVGeneratorFunc<any>) => SingleLayer<infer P> ? SingleLayer<P> :
+    T extends (generator: (e: Layer[]) => JSVGenerator) => MultipleLayer<infer L> ? MultipleLayer<L> : never;
 
 export { ImageLayerState } from "./image";
 export { RectangleLayerState } from "./rect";
