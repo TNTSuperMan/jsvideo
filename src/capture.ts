@@ -1,10 +1,7 @@
-import { audioDest } from "./audio";
-
 export const Capture = (canvas: HTMLCanvasElement, init: ()=>void, render: ()=>boolean) => () => new Promise<Blob>((res,rej)=>{
     init();
     const stream = new MediaStream([
-        ...canvas.captureStream(60).getVideoTracks(),
-        ...audioDest.stream.getAudioTracks()
+        ...canvas.captureStream(60).getVideoTracks()
     ])
     const recorder = new MediaRecorder(stream, { mimeType: "video/webm;codecs=vp9" })
     recorder.ondataavailable = e => res(e.data);
