@@ -1,5 +1,5 @@
 //参考：ビートまりお・ZUN Help me, ERINNNNNN!!
-import { L, LayerStateOf, createVideoRenderer } from "../src/index";
+import { L, LayerOf, LayerStateOf, createVideoRenderer } from "../src/index";
 
 // LayerStateOfで型ごと状態を上手く渡す
 function* swing(state: LayerStateOf<typeof L.text>){
@@ -15,6 +15,19 @@ function* swing(state: LayerStateOf<typeof L.text>){
         yield;
     }
 }
+
+const createComment = () => L.text(function*(state){
+    state.text = "( ﾟ∀ﾟ)o彡°えーりん！えーりん！";
+    state.r = 255;
+    state.g = 255;
+    state.b = 255;
+    state.y = Math.random() * 480;
+    state.x = 640;
+    while(state.x < 0){
+        state.x--;
+        yield;
+    }
+})
 
 // ビデオ描画オブジェクトの作成
 const v = createVideoRenderer(640, 480, [
@@ -49,6 +62,11 @@ const v = createVideoRenderer(640, 480, [
             state.rotate += (100-state.rotate)/10
             yield;
         }
+    }),
+    L.multi<LayerOf<typeof L.text>>(function*(state){
+        state.push(createComment());
+        console.log("we")
+        while(1) yield;
     })
 ]);
 const btn = document.createElement("button");
