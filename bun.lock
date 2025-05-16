@@ -5,7 +5,6 @@
       "name": "jsvideo",
       "devDependencies": {
         "@types/bun": "latest",
-        "bun": "^1.1.45",
       },
       "peerDependencies": {
         "typescript": "^5.0.0",
@@ -13,35 +12,11 @@
     },
   },
   "packages": {
-    "@oven/bun-darwin-aarch64": ["@oven/bun-darwin-aarch64@1.1.45", "", { "os": "darwin", "cpu": "arm64" }, "sha512-HH+xHRSF8+B0/T4b+CGOI/DWwN5pDbMhKZ3tJYWHCXCCGSc2DoU5dbVPArKc1U629a5uRtuXsBgm6kmgO7ZRUQ=="],
-
-    "@oven/bun-darwin-x64": ["@oven/bun-darwin-x64@1.1.45", "", { "os": "darwin", "cpu": "x64" }, "sha512-3UAmR4/jKw80V1p3dtVk56hClIlK9pYR8IZXIyhUXfv6j343MSDuBIlqVM8iXUh0I00u27sDbpYPJvx8Aul39Q=="],
-
-    "@oven/bun-darwin-x64-baseline": ["@oven/bun-darwin-x64-baseline@1.1.45", "", { "os": "darwin", "cpu": "x64" }, "sha512-XWy/qHZUe/UJtcaETiNz5vvS5m8utDA7nzXJJVu3Ji9MGtRUCCB1H8LGxjrB1syTRuZ+YcydotBNF7IY1O6kbw=="],
-
-    "@oven/bun-linux-aarch64": ["@oven/bun-linux-aarch64@1.1.45", "", { "os": "linux", "cpu": "arm64" }, "sha512-8UNG7RZ0tLTi+yS+GJJZB8V6gIB6iBmVTthoERWO7mI1B7RQgxImhzN7lOaKmy4D++D6cEHr7WwlUXUbXY7+9w=="],
-
-    "@oven/bun-linux-aarch64-musl": ["@oven/bun-linux-aarch64-musl@1.1.45", "", { "os": "linux", "cpu": "none" }, "sha512-J6OcF6G1lz3tDY+z055bIRF4Ajum7vnnf0Ru2I01GrPukZn5DswXPgNTZwG6aGT9hcRZs3VryTthj8itLWw8ng=="],
-
-    "@oven/bun-linux-x64": ["@oven/bun-linux-x64@1.1.45", "", { "os": "linux", "cpu": "x64" }, "sha512-mbLIJHpKFz7PAj3aW/r+yRm+SMIUzrD+MqjxhMm7hA8pXqmrNA+SWTPEFY0viShqGxTn/PRhTiEcqecJ8e/l4Q=="],
-
-    "@oven/bun-linux-x64-baseline": ["@oven/bun-linux-x64-baseline@1.1.45", "", { "os": "linux", "cpu": "x64" }, "sha512-6NlMrpAlga/0471THtCjyWA1bOTnJESnRR8U1rSNNPQsqPh1xsvDfXiZQin0ofAK44jISUsM7pcEEVN/Mb8Vcw=="],
-
-    "@oven/bun-linux-x64-musl": ["@oven/bun-linux-x64-musl@1.1.45", "", { "os": "linux", "cpu": "x64" }, "sha512-DOAxMO2X6AhlH2IOURomgIxbA0YSBFdUo2wOTBCj5wJIgtxmK6f7qb7nK13U4B/G26DcTc5/XSOZmE1xzbi+Pw=="],
-
-    "@oven/bun-linux-x64-musl-baseline": ["@oven/bun-linux-x64-musl-baseline@1.1.45", "", { "os": "linux", "cpu": "x64" }, "sha512-nBvmXOZhZovMRX/f+0jS5sirffT3Zi+WIWBshsBPnlFwKt/YCevNtzRGVpeAOtNzvPxk6WmsrE5Y4nuP4DGhmg=="],
-
-    "@oven/bun-windows-x64": ["@oven/bun-windows-x64@1.1.45", "", { "os": "win32", "cpu": "x64" }, "sha512-0JKUC6zyNTI+6GJ8cMQxiOBqt4OhFnRLS+WJjkWJIHVkwn2/jxpRSPL8+EmZpSppmMCUmF9Jt1tSVGvbCTwk0g=="],
-
-    "@oven/bun-windows-x64-baseline": ["@oven/bun-windows-x64-baseline@1.1.45", "", { "os": "win32", "cpu": "x64" }, "sha512-nP7fZ86ghfHRPJcnVkcEC91/uSB3P+9b31Kzh1BLAPj4WCADyyOZ2c2btoTMmo/cGWW/uvzGtf1SMYGtPy6XMw=="],
-
     "@types/bun": ["@types/bun@1.1.17", "", { "dependencies": { "bun-types": "1.1.44" } }, "sha512-zZt0Kao/8hAwNOXh4bmt8nKbMEd4QD8n7PeTGF+NZTVY5ouXhU/TX7jUj4He1p7mgY+WdplnU1B6MB1j17vdzg=="],
 
     "@types/node": ["@types/node@20.12.14", "", { "dependencies": { "undici-types": "~5.26.4" } }, "sha512-scnD59RpYD91xngrQQLGkE+6UrHUPzeKZWhhjBSa3HSkwjbQc38+q3RoIVEwxQGRw3M+j5hpNAM+lgV3cVormg=="],
 
     "@types/ws": ["@types/ws@8.5.13", "", { "dependencies": { "@types/node": "*" } }, "sha512-osM/gWBTPKgHV8XkTunnegTRIsvF6owmf5w+JtAfOw472dptdm0dlGv4xCt6GwQRcC2XVOvvRE/0bAoQcL2QkA=="],
-
-    "bun": ["bun@1.1.45", "", { "optionalDependencies": { "@oven/bun-darwin-aarch64": "1.1.45", "@oven/bun-darwin-x64": "1.1.45", "@oven/bun-darwin-x64-baseline": "1.1.45", "@oven/bun-linux-aarch64": "1.1.45", "@oven/bun-linux-aarch64-musl": "1.1.45", "@oven/bun-linux-x64": "1.1.45", "@oven/bun-linux-x64-baseline": "1.1.45", "@oven/bun-linux-x64-musl": "1.1.45", "@oven/bun-linux-x64-musl-baseline": "1.1.45", "@oven/bun-windows-x64": "1.1.45", "@oven/bun-windows-x64-baseline": "1.1.45" }, "os": [ "linux", "win32", "darwin", ], "cpu": [ "x64", "arm64", ], "bin": { "bun": "bin/bun.exe", "bunx": "bin/bun.exe" } }, "sha512-w1B/bL2OllGYEsgk0F2F16cyehZnspzXcC8/qM5dVE21zUaTwyv+4Otw19Jb+jDzGziZCmc2qtxF/MD4us603A=="],
 
     "bun-types": ["bun-types@1.1.44", "", { "dependencies": { "@types/node": "~20.12.8", "@types/ws": "~8.5.10" } }, "sha512-jtcekoZeSINgEcHSISzhR13w/cyE+Fankw2Cpl4c0fN3lRmKVAX0i9ay4FyK4lOxUK1HG4HkuIlrPvXKz4Y7sw=="],
 

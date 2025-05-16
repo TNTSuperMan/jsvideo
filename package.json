@@ -8,8 +8,7 @@
   "types": "dist/index.d.ts",
   "license": "MIT",
   "devDependencies": {
-    "@types/bun": "latest",
-    "bun": "^1.1.45"
+    "@types/bun": "latest"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
