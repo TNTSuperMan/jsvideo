@@ -12,16 +12,17 @@ export const createVideoRenderer = <T extends Layer[]>(width: number, height: nu
     canvas.width = width;
     canvas.height = height;
     const ctx = canvas.getContext("2d");
-    if(!ctx){
+    if(!ctx)
         throw new Error("Failed to get 2d context");
-    }else{
-        const render = () => {
+    else return {
+        canvas,
+        render(){
             ctx.clearRect(0, 0, width, height);
             const images = currentLayers.map(e=>e.draw(ctx));
             return images.every(e=>e);
+        },
+        init(){
+            currentLayers = layers.map(e=>(e.init(),e));
         }
-        const init = () => currentLayers =
-            layers.map(e=>(e.init(),e))
-        return {canvas, render, init}
     }
 }
