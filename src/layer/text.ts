@@ -6,9 +6,17 @@ export class TextLayerState extends LayerState{
     font = "sans-serif";
     color = "#000000";
 }
+
 export const createTextLayer = (generator: JSVGeneratorFunc<TextLayerState>) =>
         new SingleLayer(new TextLayerState, generator, (state, ctx)=>{
     ctx.fillStyle = state.color;
+    ctx.font = `${state.size}px ${state.font}`;
+    ctx.fillText(state.text, state.cx, state.cy + state.size);
+})
+
+export const createStrokeTextLayer = (generator: JSVGeneratorFunc<TextLayerState>) =>
+        new SingleLayer(new TextLayerState, generator, (state, ctx)=>{
+    ctx.strokeStyle = state.color;
     ctx.font = `${state.size}px ${state.font}`;
     ctx.strokeText(state.text, state.cx, state.cy + state.size);
 })

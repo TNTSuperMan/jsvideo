@@ -2,10 +2,11 @@ import { JSVGeneratorFunc, SingleLayer, Layer, JSVGenerator } from "./base";
 import { createImageLayer } from "./image";
 import { createMultiLayer, MultipleLayer } from "./multi";
 import { createRectLayer } from "./rect";
-import { createTextLayer } from "./text";
+import { createStrokeTextLayer, createTextLayer } from "./text";
 
 export const L = {
     text: createTextLayer,
+    textStroke: createStrokeTextLayer,
     rect: createRectLayer,
     image:createImageLayer,
     multi:createMultiLayer
