@@ -8,7 +8,6 @@ export class LayerState{
     x: number = 0;
     y: number = 0;
     size: number = 0;
-    transparent: number = 0;
     rotate: number = 0;
     cx: number = 0;
     cy: number = 0;
