@@ -1,4 +1,3 @@
-import { Capture } from "./capture";
 import { Layer } from "./layer/base";
 
 export * from "./layer";
@@ -7,7 +6,6 @@ export const createVideoRenderer = <T extends Layer[]>(width: number, height: nu
     canvas: HTMLCanvasElement;
     render: () => boolean;
     init: () => void;
-    capture: () => Promise<Blob>;
 } => {
     let currentLayers = layers.map(e=>e);
     const canvas = document.createElement("canvas");
@@ -24,6 +22,6 @@ export const createVideoRenderer = <T extends Layer[]>(width: number, height: nu
         }
         const init = () => currentLayers =
             layers.map(e=>(e.init(),e))
-        return {canvas, render, init, capture: Capture(canvas, init, render)}
+        return {canvas, render, init}
     }
 }

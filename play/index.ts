@@ -69,16 +69,11 @@ const v = createVideoRenderer(640, 480, [
         while(1) yield;
     })
 ]);
-const btn = document.createElement("button");
-document.body.appendChild(btn);
-btn.textContent = "start";
-btn.onclick = () => {    
-    // 動画の投影用Canvasをボディに追加(録画のみする場合でも必要)
-    document.body.append(v.canvas)
+document.body.append(v.canvas);
 
-    // 撮影
-    v.capture().then(e=>{
-        // 撮影結果をblobURLでコンソールに表示
-        console.log(URL.createObjectURL(e))
-    })
-}
+v.init();
+
+requestAnimationFrame(function anime(){
+    if(!v.render())
+        requestAnimationFrame(anime);
+})
