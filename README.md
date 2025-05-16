@@ -1,6 +1,9 @@
 # jsvideo
 ScratchのアニメーションをJavaScriptで実現したくて作りました。  
 webmエクスポート可能です。
+## セットアップ
+1. [Bun](https://bun.sh)をインストール(すでにしてる人はスキップ)
+1. `bun i`
 ## usage
 ```js
 import { L, createVideoRenderer } from "jsvideo";

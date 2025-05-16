@@ -14,8 +14,9 @@
     "typescript": "^5.0.0"
   },
   "scripts": {
-    "build": "tsc && bun build.ts",
-    "prepare": "bun run build"
+    "build": "tsc && bun build --outdir=dist --minify ./src/index.ts && bun build --outdir=dist --minify --format=cjs --entry-naming=index.cjs ./src/index.ts",
+    "prepare": "bun run build",
+    "play": "bun play/index.html"
   },
   "type": "module"
 }

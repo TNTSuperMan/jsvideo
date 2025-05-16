@@ -1,5 +1,5 @@
 //参考：ビートまりお・ZUN Help me, ERINNNNNN!!
-import { L, LayerOf, LayerStateOf, createVideoRenderer } from "../src/index";
+import { L, LayerOf, LayerStateOf, createVideoRenderer } from "../src";
 
 // LayerStateOfで型ごと状態を上手く渡す
 function* swing(state: LayerStateOf<typeof L.text>){
